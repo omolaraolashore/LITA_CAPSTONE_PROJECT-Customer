@@ -39,27 +39,30 @@ CustomerID,	CustomerName,	Region,	SubscriptionType,	SubscriptionStart,	Subscript
 ###  Data cleaning and Preparation
 ---
 Microsoft Excel and SQL were used for data cleaning tasks such as:
- -Handling missing values
- -Removing duplicates to ensure data integrity.
- -Standardizing data formats (e.g., date formats).
- -Transforming data types for consistency across the dataset.
+  1. **Handling missing values
+  2. **Removing duplicates to ensure data integrity.
+  3. **Standardizing data formats (e.g., date formats).
+  4. **Transforming data types for consistency across the dataset.
 
 I also applied some structured Query Language like
 
 ```Sql
    Select * from dbo.[[LITA Capstone_Customerdata]]]
-
+```
+```sql
    SELECT TOP 1 SubscriptionType, 
        COUNT(DISTINCT CustomerID) AS CustomerCount
 FROM dbo.[[LITA Capstone_Customerdata]]]
 GROUP BY SubscriptionType
 ORDER BY CustomerCount DESC;
-
+```
+```sql
    SELECT SubscriptionType, 
        SUM(Revenue) AS TotalRevenue
 FROM dbo.[[LITA Capstone_Customerdata]]]
 GROUP BY SubscriptionType;
-
+```
+```sql
    SELECT 
     Canceled, 
     COUNT(*) AS TotalSubscriptions
@@ -73,23 +76,39 @@ GROUP BY
 ---
 This was done using Microsoft Excel and SQL to answer some salient questions needful for proper analysis. Important questions like
 
- o Analyze customer data using pivot tables to find subscription patterns.
- o Calculate the average subscription duration and identify the most popular 
-   subscription types.
- o Create any other interesting report
+ 1.  Analyze customer data using pivot tables to find subscription patterns.
+   
+ 2.  Calculate the average subscription duration and identify the most popular subscription types.
 
- o retrieve the total number of customers from each region.
+ 3.  retrieve the total number of customers from each region.
  
- o find the most popular subscription type by the number of customers.
+ 4.  find the most popular subscription type by the number of customers.
  
- o find customers who canceled their subscription within 6 months.
+ 5.  find customers who canceled their subscription within 6 months.
  
- o calculate the average subscription duration for all customers.
+ 6.  calculate the average subscription duration for all customers.
  
- o find customers with subscriptions longer than 12 months.
+ 7.  find customers with subscriptions longer than 12 months.
  
- o calculate total revenue by subscription type.
+ 8.  calculate total revenue by subscription type.
  
- o find the top 3 regions by subscription cancellations. 
+ 9.  find the top 3 regions by subscription cancellations. 
  
- o find the total number of active and canceled subscriptions.
+ 10. find the total number of active and canceled subscriptions.
+
+### Key Findings
+---
+  -  The Basic Subscription Type is the most Popular among Customers having 16,921 Transaction IDs.It Generates the most revenue for the company
+     since 50% of their revenue comes the Basic Subscription.Basic subscription is common in the East and The North.
+
+  -  There are 20 distinct customers and they are evenly spreaded across the regions.The average Suscription duration for all customers is 365 days.
+     
+
+
+###  Data Visualization
+  -[Download Here](https://1drv.ms/x/c/a7c3aecf7c2c74b7/EeAOvisv5DNEjzCCV82C-FQB6oBdZX01oafZ_V36Su7STw?e=aw72B3&nav=MTJfJEEkMjokQiQ3X3tFOUY5M0M2OS0xMTVDLTQ0NTYtQjU4MS0xMkI1OTQ3NjVDQjJ9)
+ 
+ 
+  -(<img width="472" alt="Customer segmentation Dashboard" src="https://github.com/user-attachments/assets/b45fbc0b-6497-440d-a914-a7a90aab255e">)
+  
+   
