@@ -79,10 +79,17 @@ This was done using Microsoft Excel and SQL to answer some salient questions nee
  o Create any other interesting report
 
  o retrieve the total number of customers from each region.
+ 
  o find the most popular subscription type by the number of customers.
+ 
  o find customers who canceled their subscription within 6 months.
+ 
  o calculate the average subscription duration for all customers.
+ 
  o find customers with subscriptions longer than 12 months.
+ 
  o calculate total revenue by subscription type.
- o find the top 3 regions by subscription cancellations.
+ 
+ o find the top 3 regions by subscription cancellations. 
+ 
  o find the total number of active and canceled subscriptions.
